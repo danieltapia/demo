@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.2.3"
 
 gem 'rails', '4.2.5'
 gem 'sqlite3'
@@ -14,6 +14,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'byebug'
